@@ -1,0 +1,59 @@
+.gameContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.maze {
+  position: relative;
+  display: grid;
+  background-color: #ddd;
+  border: 5px solid black;
+  touch-action: none; /* Evita o comportamento padrão de rolagem */
+}
+
+.path {
+  background-color: white;
+}
+
+.wall {
+  background-color: black;
+}
+
+.player {
+  position: absolute;
+  transition: transform 0.05s linear; /* Suaviza o movimento */
+}
+
+.goal {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+
+.restartButton {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.restartButton:hover {
+  background-color: #0056b3;
+}
+
+.img{
+  background: #fff;
+  width: 100vw;
+  margin-bottom: 10px;
+}

@@ -1,0 +1,125 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #0a0a0a;
+  position: relative;
+  overflow: hidden;
+}
+
+.messageContainer {
+  text-align: center;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  z-index: 2;
+  width: 50%;
+}
+
+.message {
+  position: relative;
+  transform: translate(-50%, -550%);
+  opacity: 0;
+  animation: fadeIn 2s forwards 1.5s;
+}
+
+/* Coração com pontinhos */
+.heart {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: 200px;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+}
+
+.heartAnimate {
+  animation: fadeIn 2s forwards;
+}
+
+.heartDot {
+  width: 5px;
+  height: 5px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  opacity: 0;
+  transform: translate(calc(var(--x) * 1px), calc(var(--y) * 1px)) scale(0);
+}
+
+.heartDotVisible {
+  animation: appear 1.5s forwards ease-in-out;
+  animation-delay: calc(var(--i) * 0.1s);
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Animando as flores */
+.flowers {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.flower {
+  width: 20px;
+  height: 20px;
+  background-color: pink;
+  border-radius: 50%;
+  position: absolute;
+  opacity: 0;
+  transform: scale(0);
+}
+
+.flowerVisible {
+  animation: growFlower 2s forwards ease-in-out;
+  animation-delay: calc(var(--i) * 0.5s);
+}
+
+@keyframes growFlower {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.whatsappButton {
+  background: #ff0000;
+  padding: 20px;
+  border-radius: 10px;
+  color: #fff;
+  position: fixed;
+  bottom: 300px;
+}
